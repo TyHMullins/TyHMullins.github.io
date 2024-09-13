@@ -1742,7 +1742,7 @@ section,
   border: 2px solid var(--accent-color);
 }
 
-.submitbutton{
+.contanctbutton{
   color: var(--contrast-color);
   background: var(--accent-color);
   border: 0;
