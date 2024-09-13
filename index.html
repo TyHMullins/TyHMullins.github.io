@@ -43,6 +43,52 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+  <style>
+  /* Basic FAQ Item Styles */
+  .faq-container {
+    margin-top: 20px;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .faq-item h3 {
+    margin: 0;
+    font-size: 1.2em;
+  }
+
+  .faq-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+    transition: transform 0.3s ease;
+  }
+
+  /* Content Transition */
+  .faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  /* Active FAQ Item */
+  .faq-item.faq-active .faq-content {
+    max-height: 300px; /* Adjust based on content size */
+  }
+
+  .faq-item.faq-active .faq-toggle {
+    transform: rotate(90deg); /* Rotate the chevron icon */
+  }
+</style>
+
+  
 </head>
 
 <body class="index-page">
@@ -498,6 +544,29 @@
 
   <!-- Main JS File-->
   <script src="main.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      const toggleButton = item.querySelector('.faq-toggle');
+      
+      // Add click event listener to toggle each FAQ item
+      toggleButton.addEventListener('click', () => {
+        // Toggle the active class to show or hide the content
+        item.classList.toggle('faq-active');
+        
+        // Close all other FAQ items
+        faqItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('faq-active');
+          }
+        });
+      });
+    });
+  });
+</script>
+
 
 </body>
 
