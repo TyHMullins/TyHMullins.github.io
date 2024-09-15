@@ -376,10 +376,10 @@
     </section><!-- /Services Section -->
 
     <!-- Featured Properties Section -->
-    <section id = "featuredproperties" class="FeaturedProperties my-5">
+    <section id="featuredproperties" class="FeaturedProperties my-5">
       <div class="container">
         <h2 class="text-center mb-4">Featured Properties</h2>
-    
+
         <!-- Carousel Start -->
         <div id="featuredPropertiesCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
           
@@ -387,7 +387,7 @@
             <!-- First Slide -->
             <div class="carousel-item active">
               <div class="row">
-                <div class="col-md-4">
+                <div class="col-6 col-md-4 mb-4">
                   <div class="card">
                     <img src="property1.jpg" class="card-img-top" alt="Property 1">
                     <div class="card-body">
@@ -396,7 +396,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-6 col-md-4 mb-4">
                   <div class="card">
                     <img src="property2.jpg" class="card-img-top" alt="Property 2">
                     <div class="card-body">
@@ -405,7 +405,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-6 col-md-4 mb-4">
                   <div class="card">
                     <img src="property3.jpg" class="card-img-top" alt="Property 3">
                     <div class="card-body">
@@ -416,11 +416,11 @@
                 </div>
               </div>
             </div>
-    
+
             <!-- Second Slide -->
             <div class="carousel-item">
               <div class="row">
-                <div class="col-md-4">
+                <div class="col-6 col-md-4 mb-4">
                   <div class="card">
                     <img src="property4.jpg" class="card-img-top" alt="Property 4">
                     <div class="card-body">
@@ -429,7 +429,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-6 col-md-4 mb-4">
                   <div class="card">
                     <img src="property5.jpg" class="card-img-top" alt="Property 5">
                     <div class="card-body">
@@ -438,7 +438,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-6 col-md-4 mb-4">
                   <div class="card">
                     <img src="property6.jpg" class="card-img-top" alt="Property 6">
                     <div class="card-body">
@@ -449,9 +449,9 @@
                 </div>
               </div>
             </div>
-    
+
           </div>
-    
+
           <!-- Carousel Controls (left and right arrows) -->
           <button class="carousel-control-prev" type="button" data-bs-target="#featuredPropertiesCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -463,21 +463,19 @@
           </button>
         </div>
         <!-- Carousel End -->
-    
+
       </div>
     </section>
     <style>
-      /* #1bac91*/
       /* Move the arrows outside the images */
       .carousel-control-prev,
       .carousel-control-next {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        width: 40px; /* Adjust width if needed */
-        height: 40px; /* Adjust height if needed */
-        background-color: 
-        #FFFF; /* Darker background for visibility */
+        width: 30px; /* Adjusted for mobile */
+        height: 30px; /* Adjusted for mobile */
+        background-color: #FFFF; /* Darker background for visibility */
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -485,19 +483,51 @@
       }
 
       .carousel-control-prev {
-        left: -50px; /* Move the left arrow outside the image */
+        left: -30px; /* Move the left arrow outside the image for mobile */
       }
 
       .carousel-control-next {
-        right: -50px; /* Move the right arrow outside the image */
+        right: -30px; /* Move the right arrow outside the image for mobile */
       }
 
       .carousel-control-prev-icon,
       .carousel-control-next-icon {
-        width: 20px; /* Customize size of arrow icons */
+        width: 20px; /* Customize size of arrow icons for mobile */
         height: 20px;
         background-color: #1bac91; /* Set a color for the arrows */
         border-radius: 50%;
+      }
+
+      @media (max-width: 768px) {
+        .carousel-control-prev,
+        .carousel-control-next {
+          width: 20px;
+          height: 20px;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+          width: 15px;
+          height: 15px;
+        }
+
+        /* Adjust for smaller screens */
+        .col-6 {
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+
+        .carousel-item .row {
+          justify-content: center;
+        }
+      }
+
+      @media (max-width: 576px) {
+        /* On very small screens, make them 100% width */
+        .col-6 {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
       }
     </style>
     <!-- /Featured Properties Section-->
