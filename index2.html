@@ -383,13 +383,6 @@
         <!-- Carousel Start -->
         <div id="featuredPropertiesCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
           
-          <!-- Carousel Indicators (pagination bullets) -->
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#featuredPropertiesCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#featuredPropertiesCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#featuredPropertiesCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>
-    
           <div class="carousel-inner">
             <!-- First Slide -->
             <div class="carousel-item active">
@@ -473,6 +466,40 @@
     
       </div>
     </section>
+    <style>
+      /* #1bac91*/
+      /* Move the arrows outside the images */
+      .carousel-control-prev,
+      .carousel-control-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px; /* Adjust width if needed */
+        height: 40px; /* Adjust height if needed */
+        background-color: 
+        #FFFF; /* Darker background for visibility */
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .carousel-control-prev {
+        left: -50px; /* Move the left arrow outside the image */
+      }
+
+      .carousel-control-next {
+        right: -50px; /* Move the right arrow outside the image */
+      }
+
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        width: 20px; /* Customize size of arrow icons */
+        height: 20px;
+        background-color: #1bac91; /* Set a color for the arrows */
+        border-radius: 50%;
+      }
+    </style>
     <!-- /Featured Properties Section-->
 
     <!-- Team Section-->
