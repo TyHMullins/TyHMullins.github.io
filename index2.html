@@ -387,7 +387,7 @@
             <!-- First Slide -->
             <div class="carousel-item active">
               <div class="row">
-                <div class="col-6 col-md-4 mb-4">
+                <div class="col-4 mb-4">
                   <div class="card">
                     <img src="property1.jpg" class="card-img-top" alt="Property 1">
                     <div class="card-body">
@@ -396,7 +396,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-6 col-md-4 mb-4">
+                <div class="col-4 mb-4">
                   <div class="card">
                     <img src="property2.jpg" class="card-img-top" alt="Property 2">
                     <div class="card-body">
@@ -405,7 +405,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-6 col-md-4 mb-4">
+                <div class="col-4 mb-4">
                   <div class="card">
                     <img src="property3.jpg" class="card-img-top" alt="Property 3">
                     <div class="card-body">
@@ -420,7 +420,7 @@
             <!-- Second Slide -->
             <div class="carousel-item">
               <div class="row">
-                <div class="col-6 col-md-4 mb-4">
+                <div class="col-4 mb-4">
                   <div class="card">
                     <img src="property4.jpg" class="card-img-top" alt="Property 4">
                     <div class="card-body">
@@ -429,7 +429,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-6 col-md-4 mb-4">
+                <div class="col-4 mb-4">
                   <div class="card">
                     <img src="property5.jpg" class="card-img-top" alt="Property 5">
                     <div class="card-body">
@@ -438,7 +438,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-6 col-md-4 mb-4">
+                <div class="col-4 mb-4">
                   <div class="card">
                     <img src="property6.jpg" class="card-img-top" alt="Property 6">
                     <div class="card-body">
@@ -498,6 +498,12 @@
         border-radius: 50%;
       }
 
+      /* Maintain the three-column layout across all screen sizes */
+      .carousel-item .col-4 {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+      }
+
       @media (max-width: 768px) {
         .carousel-control-prev,
         .carousel-control-next {
@@ -511,22 +517,26 @@
           height: 15px;
         }
 
-        /* Adjust for smaller screens */
-        .col-6 {
-          flex: 0 0 50%;
-          max-width: 50%;
-        }
-
-        .carousel-item .row {
-          justify-content: center;
+        /* Ensure columns remain three per row on smaller screens */
+        .carousel-item .col-4 {
+          flex: 0 0 33.3333%;
+          max-width: 33.3333%;
         }
       }
 
       @media (max-width: 576px) {
-        /* On very small screens, make them 100% width */
-        .col-6 {
-          flex: 0 0 100%;
-          max-width: 100%;
+        /* Even for small screens, maintain 3 cards per row */
+        .carousel-item .col-4 {
+          flex: 0 0 33.3333%;
+          max-width: 33.3333%;
+        }
+
+        .card img {
+          height: auto; /* Adjust image height for smaller screens */
+        }
+
+        .card-body {
+          padding: 10px; /* Adjust card padding for smaller screens */
         }
       }
     </style>
@@ -1306,7 +1316,6 @@
     });
   });
 </script>
-
 
 </body>
 
