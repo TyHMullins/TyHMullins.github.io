@@ -384,11 +384,10 @@
         <div id="featuredPropertiesCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
           
           <div class="carousel-inner">
-            
-            <!-- First Slide (For Desktop/Tablet: 3 cards per slide) -->
+            <!-- First Group of 3 Cards (For Desktop) -->
             <div class="carousel-item active">
               <div class="row">
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4">
                   <div class="card">
                     <img src="property1.jpg" class="card-img-top" alt="Property 1">
                     <div class="card-body">
@@ -397,7 +396,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4 mb-4 d-none d-md-block">
+                <div class="col-md-4 d-none d-md-block">
                   <div class="card">
                     <img src="property2.jpg" class="card-img-top" alt="Property 2">
                     <div class="card-body">
@@ -406,7 +405,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4 mb-4 d-none d-md-block">
+                <div class="col-md-4 d-none d-md-block">
                   <div class="card">
                     <img src="property3.jpg" class="card-img-top" alt="Property 3">
                     <div class="card-body">
@@ -418,10 +417,10 @@
               </div>
             </div>
 
-            <!-- Second Slide (For Desktop/Tablet: 3 cards per slide) -->
+            <!-- Second Group of 3 Cards (For Desktop) -->
             <div class="carousel-item">
               <div class="row">
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4">
                   <div class="card">
                     <img src="property4.jpg" class="card-img-top" alt="Property 4">
                     <div class="card-body">
@@ -430,7 +429,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4 mb-4 d-none d-md-block">
+                <div class="col-md-4 d-none d-md-block">
                   <div class="card">
                     <img src="property5.jpg" class="card-img-top" alt="Property 5">
                     <div class="card-body">
@@ -439,7 +438,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4 mb-4 d-none d-md-block">
+                <div class="col-md-4 d-none d-md-block">
                   <div class="card">
                     <img src="property6.jpg" class="card-img-top" alt="Property 6">
                     <div class="card-body">
@@ -451,74 +450,87 @@
               </div>
             </div>
 
-            <!-- Mobile-Only Carousel Items (1 Card Per Slide) -->
+            <!-- Mobile View (One Card per Slide) -->
+            <!-- These will show only on mobile (under 768px) and will hide on larger screens -->
             <div class="carousel-item">
-              <div class="col-12 mb-4">
-                <div class="card">
-                  <img src="property1.jpg" class="card-img-top" alt="Property 1">
-                  <div class="card-body">
-                    <h5 class="card-title">Luxury Villa</h5>
-                    <p class="card-text">$1,200,000 • 5 Beds • 4 Baths • 3500 sqft</p>
+              <div class="row">
+                <div class="col-12">
+                  <div class="card">
+                    <img src="property1.jpg" class="card-img-top" alt="Property 1">
+                    <div class="card-body">
+                      <h5 class="card-title">Luxury Villa</h5>
+                      <p class="card-text">$1,200,000 • 5 Beds • 4 Baths • 3500 sqft</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
             <div class="carousel-item">
-              <div class="col-12 mb-4">
-                <div class="card">
-                  <img src="property2.jpg" class="card-img-top" alt="Property 2">
-                  <div class="card-body">
-                    <h5 class="card-title">Modern Apartment</h5>
-                    <p class="card-text">$850,000 • 3 Beds • 2 Baths • 1500 sqft</p>
+              <div class="row">
+                <div class="col-12">
+                  <div class="card">
+                    <img src="property2.jpg" class="card-img-top" alt="Property 2">
+                    <div class="card-body">
+                      <h5 class="card-title">Modern Apartment</h5>
+                      <p class="card-text">$850,000 • 3 Beds • 2 Baths • 1500 sqft</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
             <div class="carousel-item">
-              <div class="col-12 mb-4">
-                <div class="card">
-                  <img src="property3.jpg" class="card-img-top" alt="Property 3">
-                  <div class="card-body">
-                    <h5 class="card-title">Beachside Bungalow</h5>
-                    <p class="card-text">$950,000 • 4 Beds • 3 Baths • 2200 sqft</p>
+              <div class="row">
+                <div class="col-12">
+                  <div class="card">
+                    <img src="property3.jpg" class="card-img-top" alt="Property 3">
+                    <div class="card-body">
+                      <h5 class="card-title">Beachside Bungalow</h5>
+                      <p class="card-text">$950,000 • 4 Beds • 3 Baths • 2200 sqft</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
             <div class="carousel-item">
-              <div class="col-12 mb-4">
-                <div class="card">
-                  <img src="property4.jpg" class="card-img-top" alt="Property 4">
-                  <div class="card-body">
-                    <h5 class="card-title">Countryside House</h5>
-                    <p class="card-text">$980,000 • 5 Beds • 3 Baths • 3000 sqft</p>
+              <div class="row">
+                <div class="col-12">
+                  <div class="card">
+                    <img src="property4.jpg" class="card-img-top" alt="Property 4">
+                    <div class="card-body">
+                      <h5 class="card-title">Countryside House</h5>
+                      <p class="card-text">$980,000 • 5 Beds • 3 Baths • 3000 sqft</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
             <div class="carousel-item">
-              <div class="col-12 mb-4">
-                <div class="card">
-                  <img src="property5.jpg" class="card-img-top" alt="Property 5">
-                  <div class="card-body">
-                    <h5 class="card-title">Urban Condo</h5>
-                    <p class="card-text">$600,000 • 2 Beds • 2 Baths • 1200 sqft</p>
+              <div class="row">
+                <div class="col-12">
+                  <div class="card">
+                    <img src="property5.jpg" class="card-img-top" alt="Property 5">
+                    <div class="card-body">
+                      <h5 class="card-title">Urban Condo</h5>
+                      <p class="card-text">$600,000 • 2 Beds • 2 Baths • 1200 sqft</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
             <div class="carousel-item">
-              <div class="col-12 mb-4">
-                <div class="card">
-                  <img src="property6.jpg" class="card-img-top" alt="Property 6">
-                  <div class="card-body">
-                    <h5 class="card-title">City Loft</h5>
-                    <p class="card-text">$750,000 • 2 Beds • 1 Bath • 1400 sqft</p>
+              <div class="row">
+                <div class="col-12">
+                  <div class="card">
+                    <img src="property6.jpg" class="card-img-top" alt="Property 6">
+                    <div class="card-body">
+                      <h5 class="card-title">City Loft</h5>
+                      <p class="card-text">$750,000 • 2 Beds • 1 Bath • 1400 sqft</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -540,6 +552,7 @@
 
       </div>
     </section>
+
     <style>
       /* Move the arrows outside the images */
       .carousel-control-prev,
@@ -547,8 +560,8 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
         background-color: #FFFF;
         border-radius: 50%;
         display: flex;
@@ -557,37 +570,39 @@
       }
 
       .carousel-control-prev {
-        left: -50px;
+        left: -30px;
       }
 
       .carousel-control-next {
-        right: -50px;
+        right: -30px;
       }
 
       .carousel-control-prev-icon,
       .carousel-control-next-icon {
-        width: 40px;
-        height: 40px;
+        width: 20px;
+        height: 20px;
         background-color: #1bac91;
         border-radius: 50%;
       }
 
       @media (max-width: 767px) {
-        /* On mobile, each slide shows only one card */
-        .carousel-item .col-12 {
-          max-width: 100%;
-          flex: 0 0 100%;
+        /* On mobile, hide desktop cards and show mobile-specific slides */
+        .carousel-item .col-md-4 {
+          display: none;
         }
       }
 
       @media (min-width: 768px) {
-        /* On larger screens, group 3 cards per slide */
+        /* On larger screens, show 3 cards per slide and hide mobile-specific cards */
+        .carousel-item .col-12 {
+          display: none;
+        }
         .carousel-item .col-md-4 {
-          max-width: 33.333%;
-          flex: 0 0 33.333%;
+          display: block;
         }
       }
     </style>
+
     <!-- /Featured Properties Section-->
 
     <!-- Team Section-->
