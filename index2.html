@@ -387,7 +387,7 @@
             <!-- First Slide -->
             <div class="carousel-item active">
               <div class="row">
-                <div class="col-4 mb-4">
+                <div class="col-md-4 mb-4">
                   <div class="card">
                     <img src="property1.jpg" class="card-img-top" alt="Property 1">
                     <div class="card-body">
@@ -396,7 +396,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-4 mb-4">
+                <div class="col-md-4 mb-4 d-none d-md-block">
                   <div class="card">
                     <img src="property2.jpg" class="card-img-top" alt="Property 2">
                     <div class="card-body">
@@ -405,7 +405,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-4 mb-4">
+                <div class="col-md-4 mb-4 d-none d-md-block">
                   <div class="card">
                     <img src="property3.jpg" class="card-img-top" alt="Property 3">
                     <div class="card-body">
@@ -420,7 +420,7 @@
             <!-- Second Slide -->
             <div class="carousel-item">
               <div class="row">
-                <div class="col-4 mb-4">
+                <div class="col-md-4 mb-4">
                   <div class="card">
                     <img src="property4.jpg" class="card-img-top" alt="Property 4">
                     <div class="card-body">
@@ -429,7 +429,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-4 mb-4">
+                <div class="col-md-4 mb-4 d-none d-md-block">
                   <div class="card">
                     <img src="property5.jpg" class="card-img-top" alt="Property 5">
                     <div class="card-body">
@@ -438,7 +438,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-4 mb-4">
+                <div class="col-md-4 mb-4 d-none d-md-block">
                   <div class="card">
                     <img src="property6.jpg" class="card-img-top" alt="Property 6">
                     <div class="card-body">
@@ -449,7 +449,6 @@
                 </div>
               </div>
             </div>
-
           </div>
 
           <!-- Carousel Controls (left and right arrows) -->
@@ -473,8 +472,8 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        width: 30px; /* Adjusted for mobile */
-        height: 30px; /* Adjusted for mobile */
+        width: 40px; 
+        height: 40px; 
         background-color: #FFFF; /* Darker background for visibility */
         border-radius: 50%;
         display: flex;
@@ -483,60 +482,36 @@
       }
 
       .carousel-control-prev {
-        left: -30px; /* Move the left arrow outside the image for mobile */
+        left: -50px; /* Move the left arrow outside the image for mobile */
       }
 
       .carousel-control-next {
-        right: -30px; /* Move the right arrow outside the image for mobile */
+        right: -50px; /* Move the right arrow outside the image for mobile */
       }
 
       .carousel-control-prev-icon,
       .carousel-control-next-icon {
-        width: 20px; /* Customize size of arrow icons for mobile */
-        height: 20px;
+        width: 40px; 
+        height: 40px;
         background-color: #1bac91; /* Set a color for the arrows */
         border-radius: 50%;
       }
 
-      /* Maintain the three-column layout across all screen sizes */
-      .carousel-item .col-4 {
-        flex: 0 0 33.3333%;
-        max-width: 33.3333%;
-      }
-
-      @media (max-width: 768px) {
-        .carousel-control-prev,
-        .carousel-control-next {
-          width: 20px;
-          height: 20px;
-        }
-
-        .carousel-control-prev-icon,
-        .carousel-control-next-icon {
-          width: 15px;
-          height: 15px;
-        }
-
-        /* Ensure columns remain three per row on smaller screens */
-        .carousel-item .col-4 {
-          flex: 0 0 33.3333%;
-          max-width: 33.3333%;
+      /* Ensure carousel items adjust for mobile */
+      @media (max-width: 767px) {
+        /* Show only one card per carousel-item on mobile */
+        .carousel-item .col-md-4 {
+          display: block;
+          max-width: 100%;
+          flex: 0 0 100%;
         }
       }
 
-      @media (max-width: 576px) {
-        /* Even for small screens, maintain 3 cards per row */
-        .carousel-item .col-4 {
-          flex: 0 0 33.3333%;
-          max-width: 33.3333%;
-        }
-
-        .card img {
-          height: auto; /* Adjust image height for smaller screens */
-        }
-
-        .card-body {
-          padding: 10px; /* Adjust card padding for smaller screens */
+      @media (min-width: 768px) {
+        /* Show 3 cards per slide on tablet and larger */
+        .carousel-item .col-md-4 {
+          max-width: 33.333%;
+          flex: 0 0 33.333%;
         }
       }
     </style>
