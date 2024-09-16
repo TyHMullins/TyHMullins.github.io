@@ -2111,8 +2111,8 @@ section,
 }
 
 .featuredproperties .property-card img {
-  width: 100%;
-  height: auto; /* Let the image scale correctly */
+  width: 100%; /* change to 300px */
+  height: auto; /* Let the image scale correctly  IF THAT DOESNT WORK SET A FIXED HEIGHT*/
   object-fit: cover;
   object-position: center;
 }
@@ -2130,21 +2130,29 @@ section,
 .featuredproperties .card-title {
   font-size: 1.25rem; /* Scalable font size */
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 0px; 
 }
 
-/* Info and Address Text */
-.featuredproperties .card-text.info,
-.featuredproperties .card-text.addy {
-  font-size: 1rem; /* Consistent font size */
+/* Info Text */
+.featuredproperties .card-text.info {
+  font-size: 1rem; /* Scalable font size */
   margin: 0;
   padding: 0;
-  margin-top: 5px; /* Small positive margin for spacing */
+  margin-top: -10px; 
+}
+
+/* Addy Text */
+
+.featuredproperties .card-text.addy {
+  font-size: 0.8rem; /* Scalable font size */
+  margin: 0;
+  padding: 0;
+  margin-top: -10px; 
 }
 
 /* Reference Text */
 .featuredproperties .card-text.reference {
-  font-size: 0.75rem; /* Smaller size for less important text */
+  font-size: 0.5rem; /* Smaller size for less important text */
   color: #666; /* Optional: lighter color */
 }
 
