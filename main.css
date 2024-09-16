@@ -2100,7 +2100,7 @@ section,
 .featuredproperties .property-card {
   width: 100%; /* Full width of container */
   max-width: 300px; /* Limit the max width */
-  height: auto; /* Let the height adjust based on content */
+  height: auto; /* Let the height adjust based on content CHANGE TO A FIXED NUMBER */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   overflow: hidden;
@@ -2227,15 +2227,7 @@ section,
   .featuredproperties .property-card .card-body {
     padding: 10px; /* Reduced padding */
   }
-
-  .featuredproperties .card-title {
-    font-size: 1.25rem; /* Slightly smaller font size */
-  }
-
-  .featuredproperties .card-text.info,
-  .featuredproperties .card-text.addy {
-    font-size: 0.875rem; /* Smaller font size */
-  }
+  
 }
 
 /* Extra small screens (phones, etc.) */
@@ -2244,16 +2236,23 @@ section,
     width: 100%; /* Full width on very small screens */
   }
 
-  .featuredproperties .swiper-wrapper {
-    flex-direction: column; /* Stack the cards vertically */
-  }
-
   .featuredproperties .card-title {
     font-size: 1rem; /* Even smaller font for tiny screens */
   }
 
-  .featuredproperties .card-text.info,
+  /* Info Text */
+  .featuredproperties .card-text.info {
+    font-size: 0.8rem; /* Scalable font size */
+    margin: 0;
+    padding: 0;
+    margin-top: -10px; 
+  }
+
+  /* Addy Text */
   .featuredproperties .card-text.addy {
-    font-size: 0.75rem; /* Reduce font size further for small screens */
+    font-size: 0.56.8rem; /* Scalable font size */
+    margin: 0;
+    padding: 0;
+    margin-top: -10px; 
   }
 }
