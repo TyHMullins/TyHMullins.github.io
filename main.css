@@ -2095,35 +2095,34 @@ section,
   text-align:left;
 }
 
+/* Card Text */
+.featuredproperties .card-text{
+  padding:0px;
+  margin:0px;
+  margin-bottom:-2px;
+}
+
 /* Reference Text */
 .featuredproperties .card-text.reference {
   font-size: 10px;
-  padding:0px;
-  margin:0px;
 }
 
 /* Title Text */
 .featuredproperties .card-text .price {
   font-size:20px;
   font-weight: 600;
-  padding:0px;
-  margin:0px;
 }
 
 /* Address Text*/
 .featuredproperties .card-text .addy{
   font-size: 14px;
   padding:0px;
-  margin:0px;
-  margin-bottom:-2px;
 }
 
 /* Info Text */
 .featuredproperties .card-text .info{
   font-size: 16px;
   padding:0px;
-  margin:0px;
-  margin-bottom:-2px;
 }
 
 /* Customizing Arrows */
