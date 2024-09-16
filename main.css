@@ -2125,9 +2125,9 @@ font-size: 10px;
 }
 
 @media (max-width:768px){
-.swiper-button-next, .swiper-button-prev{
-  display:none;
-}
+  .featuredproperties .swiper-button-next, .featuredproperties .swiper-button-prev{
+    display:none;
+  }
 }
 
 /* Customizing Pagination Bubbles */
