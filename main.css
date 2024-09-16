@@ -2099,7 +2099,6 @@ section,
 .featuredproperties .card-text{
   padding:0px;
   margin:0px;
-  line-height: 1;
 }
 
 /* Reference Text */
@@ -2152,6 +2151,15 @@ section,
 .featuredproperties .swiper-button-next:active i, .swiper-button-prev:active i, .swiper-button-next:focus i, .swiper-button-prev:focus i {
   font-size: 16px; /* Prevent any size change on click or focus */
 }
+
+.featuredproperties .swiper-button-next {
+  right: -30px; /* Move the next button 30px further out */
+}
+
+.featuredproperties .swiper-button-prev {
+  left: -30px; /* Move the prev button 30px further out */
+}
+
 
 @media (max-width:768px){
   .featuredproperties .swiper-button-next, .featuredproperties .swiper-button-prev{
