@@ -931,7 +931,7 @@ section,
   transform: scale(1.1);
 }
 
-/* Monile Slider */
+/* Mobile Slider */
 /* Customizing Pagination Bubbles */
 .recent-blog-posts .swiper-pagination-bullet {
   width: 12px;
@@ -1040,7 +1040,7 @@ section,
 .portfolio .portfolio-filters li:hover,
 .portfolio .portfolio-filters li.filter-active {
   color: var(--contrast-color);
-  background-color: var(--accent-color);
+  background-color: var(--background-color);
 }
 
 .portfolio .portfolio-filters li:first-child {
