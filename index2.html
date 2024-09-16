@@ -541,11 +541,16 @@
             background-color: #17a482; /* Darker accent color on hover */
         }
 
-        /* Optional: You can also add specific styles for active or focused states to prevent further size increase */
         .swiper-button-next:active i, .swiper-button-prev:active i, .swiper-button-next:focus i, .swiper-button-prev:focus i {
             font-size: 16px; /* Prevent any size change on click or focus */
         }
-    
+        
+        @media (max-width:768px){
+          .swiper-button-next, .swiper-button-prev{
+            display:none;
+          }
+        }
+
         /* Customizing Pagination Bubbles */
         .swiper-pagination-bullet {
             width: 12px;
