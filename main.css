@@ -1114,6 +1114,12 @@ section,
   bottom: 0;
 }
 
+@media (max-width: 768px) {
+  .portfolio .portfolio-item {
+      width: 25%; /* 50% Show two items per row */
+  }
+}
+
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
