@@ -510,10 +510,10 @@
             border-radius: 8px;
             overflow: hidden;
             background-color: #fff;
-        }
+        }4
     
         .property-card img {
-            width: 100%;
+            max-width: 100%;
             height: auto;
         }
     
@@ -534,11 +534,16 @@
         }
     
         .swiper-button-next i, .swiper-button-prev i {
-            font-size: 30px;
+            font-size: 16px;
         }
     
         .swiper-button-next:hover, .swiper-button-prev:hover {
             background-color: #17a482; /* Darker accent color on hover */
+        }
+
+        /* Optional: You can also add specific styles for active or focused states to prevent further size increase */
+        .swiper-button-next:active i, .swiper-button-prev:active i, .swiper-button-next:focus i, .swiper-button-prev:focus i {
+            font-size: 16px; /* Prevent any size change on click or focus */
         }
     
         /* Customizing Pagination Bubbles */
