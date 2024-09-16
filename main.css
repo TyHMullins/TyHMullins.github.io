@@ -2096,9 +2096,19 @@ section,
   text-align:left;
 }
 
-/* Reference Text Size*/
+/* Reference Text */
 .featuredproperties .card-text.reference {
   font-size: 10px;
+}
+
+/* Title Text */
+.featuredproperties .card-title {
+  font-size:20px;
+}
+
+/* */
+.featuredproperties .card-text {
+  font-size: 16px;
 }
 
 /* Customizing Arrows */

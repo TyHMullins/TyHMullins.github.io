@@ -151,7 +151,7 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2 class="fw-bold">About Me</h2>
+        <h2>About Me</h2>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -378,7 +378,12 @@
    <!-- Featured Properties Section -->
     <section id="featuredproperties" class="featuredproperties section my-5"> <!--SEE IF I CAN REMOVE MY-5-->
       <div class="container my-5">
-        <h2 class="text-center mb-4">Featured Properties</h2>
+        <!-- Section Title -->
+        <div class="container section-title aos-init aos-animate" data-aos="fade-up">
+          <h2>Featured Properties</h2>
+        </div><!-- End Section Title -->
+
+        <!--<h2 class="text-center mb-4">Featured Properties</h2>-->
     
         <div class="swiper mySwiper position-relative">
             <div class="swiper-wrapper">
@@ -471,7 +476,7 @@
     <script>
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 1,
-            spaceBetween: 15,
+            spaceBetween: 10,
             loop: true,
             pagination: {
                 el: ".swiper-pagination",
