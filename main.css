@@ -931,6 +931,29 @@ section,
   transform: scale(1.1);
 }
 
+/* Monile Slider */
+/* Customizing Pagination Bubbles */
+.recent-blog-posts .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border: 2px solid var(--accent-color);
+  opacity: 1;
+  margin: 0 5px;
+}
+
+.recent-blog-posts .swiper-pagination-bullet-active {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+/* Adjust pagination positioning */
+.recent-blog-poststies .swiper-pagination {
+  margin-top:20px;
+  position:relative;
+}
+
+
 /*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
