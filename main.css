@@ -2054,32 +2054,32 @@ section,
 # Featured Lsitings Section
 --------------------------------------------------------------*/
  /* Swiper Container */
- .swiper {
+ .featuredproperties .swiper {
   width: 100%;
   height: 100%;
-  background-color: #FFFFFF; /* Background color */
+  background-color: var(--background-color);
 }
 
-.swiper-slide {
+.featuredproperties .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.property-card {
+.featuredproperties .property-card {
   width: 100%;
   max-width:300px;
   height:400px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   overflow: hidden;
-  background-color: #fff;
+  background-color: var(--background-color);
   display:flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.property-card imeg {
+.featuredproperties .property-card imeg {
   width: 100%;
   height: 250px;
   object-fit: cover;
@@ -2087,7 +2087,7 @@ section,
 }
 
 /* Card Body */
-.property-card .card-body {
+.featuredproperties .property-card .card-body {
   padding: 10px;
   flex-grow: 1;
   display: flex;
@@ -2096,13 +2096,13 @@ section,
   text-align:left;
 }
 
-.card-text.reference {
+.featuredproperties .card-text.reference {
 font-size: 10px;
 }
 
 /* Customizing Arrows */
-.swiper-button-next, .swiper-button-prev {
-  background-color: #1bac91; /* Accent color */
+.featuredproperties .swiper-button-next, .swiper-button-prev {
+  background-color: var(--accent-color);
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -2112,15 +2112,15 @@ font-size: 10px;
   color: #fff;
 }
 
-.swiper-button-next::after, .swiper-button-prev::after {
+.featuredproperties .swiper-button-next::after, .swiper-button-prev::after {
  font-size: 16px; /* Smaller arrow size */
 }
 
-.swiper-button-next:hover, .swiper-button-prev:hover {
+.featuredproperties .swiper-button-next:hover, .swiper-button-prev:hover {
   background-color: #17a482; /* Darker accent color on hover */
 }
 
-.swiper-button-next:active i, .swiper-button-prev:active i, .swiper-button-next:focus i, .swiper-button-prev:focus i {
+.featuredproperties .swiper-button-next:active i, .swiper-button-prev:active i, .swiper-button-next:focus i, .swiper-button-prev:focus i {
   font-size: 16px; /* Prevent any size change on click or focus */
 }
 
@@ -2131,22 +2131,22 @@ font-size: 10px;
 }
 
 /* Customizing Pagination Bubbles */
-.swiper-pagination-bullet {
+.featuredproperties .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: #fff;
-  border: 2px solid #1bac91; /* Accent color border */
+  border: 2px solid var(--accent-color);
   opacity: 1;
   margin: 0 5px;
 }
 
-.swiper-pagination-bullet-active {
-  background-color: #1bac91; /* Accent color when active */
-  border-color: #1bac91;
+.featuredproperties .swiper-pagination-bullet-active {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 /* Adjust pagination positioning */
-.swiper-pagination {
+.featuredproperties .swiper-pagination {
   margin-top:20px;
   position:relative;
 }
