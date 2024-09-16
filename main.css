@@ -2099,7 +2099,7 @@ section,
 .featuredproperties .card-text{
   padding:0px;
   margin:0px;
-  margin-bottom:-2px;
+  line-height: 1;
 }
 
 /* Reference Text */
