@@ -510,15 +510,21 @@
             border-radius: 8px;
             overflow: hidden;
             background-color: #fff;
+            display:flex;
+            flex-direction: column;
         }4
     
-        .property-card img {
+        .property-card imeg {
             width: 100%;
             height: auto;
+            object-fit: cover;
+            aspect-ratio: 4 / 3; /*remove later testing*/
         }
-    
+        
+        /* Card Body */
         .property-card .card-body {
             padding: 10px;
+            flex-grow: 1;
         }
     
         /* Customizing Arrows */
