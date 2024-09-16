@@ -2103,7 +2103,7 @@ section,
 }
 
 /* Reference Text */
-.featuredproperties .card-text-reference {
+.featuredproperties .card-text.reference {
   font-size: 10px;
 }
 
