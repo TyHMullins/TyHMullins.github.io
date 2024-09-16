@@ -2079,11 +2079,12 @@ section,
   border: 2px solid var(--accent-color);
 }
 
-  /*--------------------------------------------------------------
-# Featured Lsitings Section
+/*--------------------------------------------------------------
+# Featured Listings Section
 --------------------------------------------------------------*/
- /* Swiper Container */
- .featuredproperties .swiper {
+
+/* Swiper Container */
+.featuredproperties .swiper {
   width: 100%;
   height: 100%;
   background-color: var(--background-color);
@@ -2097,65 +2098,54 @@ section,
 }
 
 .featuredproperties .property-card {
-  width:300px;
-  height:350px;
+  width: 100%; /* Full width of container */
+  max-width: 300px; /* Limit the max width */
+  height: auto; /* Let the height adjust based on content */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   overflow: hidden;
   background-color: var(--background-color);
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .featuredproperties .property-card img {
-  width:100%;
-  height: 200px;
+  width: 100%;
+  height: auto; /* Let the image scale correctly */
   object-fit: cover;
   object-position: center;
 }
 
 /* Card Body */
 .featuredproperties .property-card .card-body {
-  padding: 10px;
-  flex-grow: 1;
+  padding: 15px; /* Add padding for spacing */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  text-align:left;
+  gap: 10px; /* Space between text elements */
+  text-align: left;
 }
 
-/* Card Text */
-.featuredproperties .card-text{
-  padding:0px;
-  margin:0px;
+/* Title Text */
+.featuredproperties .card-title {
+  font-size: 1.25rem; /* Scalable font size */
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Info and Address Text */
+.featuredproperties .card-text.info,
+.featuredproperties .card-text.addy {
+  font-size: 1rem; /* Consistent font size */
+  margin: 0;
+  padding: 0;
+  margin-top: 5px; /* Small positive margin for spacing */
 }
 
 /* Reference Text */
 .featuredproperties .card-text.reference {
-  font-size: 10px;
-}
-
-/* Title Text */
-.featuredproperties .card-title{
-  font-size:20px;
-  font-weight: 600;
-  padding:0px;
-  margin:0px;
-}
-
-/* Address Text*/
-.featuredproperties .card-text.addy{
-  font-size: 14px;
-  padding:0px;
-  margin-top:-30px;
-}
-
-/* Info Text */
-.featuredproperties .card-text.info{
-  font-size: 16px;
-  padding:0px;
-  margin-top:-30px;
+  font-size: 0.75rem; /* Smaller size for less important text */
+  color: #666; /* Optional: lighter color */
 }
 
 /* Customizing Arrows */
@@ -2171,7 +2161,7 @@ section,
 }
 
 .featuredproperties .swiper-button-next::after, .swiper-button-prev::after {
- font-size: 16px; /* Smaller arrow size */
+  font-size: 16px; /* Smaller arrow size */
 }
 
 .featuredproperties .swiper-button-next:hover, .swiper-button-prev:hover {
@@ -2183,17 +2173,17 @@ section,
 }
 
 .featuredproperties .swiper-button-next {
-  right: -30px; /* Move the next button 30px further out */
+  right: -30px; /* Move the next button further out */
 }
 
 .featuredproperties .swiper-button-prev {
-  left: -30px; /* Move the prev button 30px further out */
+  left: -30px; /* Move the prev button further out */
 }
 
-
-@media (max-width:768px){
-  .featuredproperties .swiper-button-next, .featuredproperties .swiper-button-prev{
-    display:none;
+/* Hide arrows on mobile screens */
+@media (max-width: 768px) {
+  .featuredproperties .swiper-button-next, .featuredproperties .swiper-button-prev {
+    visibility: hidden;
   }
 }
 
@@ -2214,6 +2204,48 @@ section,
 
 /* Adjust pagination positioning */
 .featuredproperties .swiper-pagination {
-  margin-top:20px;
-  position:relative;
+  margin-top: 10px; /* Reduced margin for cleaner layout */
+  position: relative;
+}
+
+/* Responsive Design Adjustments */
+
+/* Make the text smaller and adjust layout for smaller screens */
+@media (max-width: 768px) {
+  .featuredproperties .property-card {
+    max-width: 100%; /* Full width on smaller screens */
+  }
+
+  .featuredproperties .property-card .card-body {
+    padding: 10px; /* Reduced padding */
+  }
+
+  .featuredproperties .card-title {
+    font-size: 1.25rem; /* Slightly smaller font size */
+  }
+
+  .featuredproperties .card-text.info,
+  .featuredproperties .card-text.addy {
+    font-size: 0.875rem; /* Smaller font size */
+  }
+}
+
+/* Extra small screens (phones, etc.) */
+@media (max-width: 480px) {
+  .featuredproperties .property-card {
+    width: 100%; /* Full width on very small screens */
+  }
+
+  .featuredproperties .swiper-wrapper {
+    flex-direction: column; /* Stack the cards vertically */
+  }
+
+  .featuredproperties .card-title {
+    font-size: 1rem; /* Even smaller font for tiny screens */
+  }
+
+  .featuredproperties .card-text.info,
+  .featuredproperties .card-text.addy {
+    font-size: 0.75rem; /* Reduce font size further for small screens */
+  }
 }
