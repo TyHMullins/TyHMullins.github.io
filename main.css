@@ -2070,7 +2070,7 @@ section,
 .featuredproperties .property-card {
   width:300px;
   height:350px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
   overflow: hidden;
   background-color: var(--background-color);
