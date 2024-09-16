@@ -818,7 +818,7 @@
       </div>
   
       <!-- Swiper Carousel for mobile (hide on desktop) -->
-      <div class="swiper-container d-lg-none">
+      <div class="swiper-container d-lg-none" style="max-width: 90%; margin: 0 auto;">  <!-- Reduced width for mobile -->
           <div class="swiper-wrapper">
               <!-- Slide 1 -->
               <div class="swiper-slide">
@@ -868,55 +868,37 @@
                   </div>
               </div>
           </div>
-  
-          <!-- Pagination -->
+          
+          <!-- Pagination for indicators -->
           <div class="swiper-pagination"></div>
+          <!-- TRY THIS IF OTHER DOESNT WORK             <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 3" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5"></span></div>
+-->
       </div>
-    
+  
     </section>
-    
-    <!-- Swiper JS Initialization -->
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            loop: true,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            breakpoints: {
-                992: {
-                    slidesPerView: 1,
-                    spaceBetween: 10,
-                }
-            }
-        });
-    </script>
-    
-    <!-- CSS to control the height and make it mobile-friendly -->
-    <style>
-        .swiper-container {
-            max-height: 70vh; /* Limit the height on mobile */
-            margin-bottom: 20px; /* Add some space below the carousel */
-        }
-        .swiper-slide {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 10px;
-        }
-        .post-item {
-            width: 100%; /* Ensure the post takes full width */
-            max-height: 100%; /* Limit the height to avoid overflow */
-        }
-        .post-img {
-            max-height: 250px; /* Limit the height of the image */
-            overflow: hidden;
-        }
-        .post-img img {
-            object-fit: cover; /* Ensure the image covers the space without stretching */
-        }
-    </style>
-    
+  
+     <!-- Swiper JS Initialization -->
+     <script>
+      var swiper = new Swiper('.swiper-container', {
+          loop: true,
+          pagination: {
+              el: '.swiper-pagination', // Enables the indicators
+              clickable: true,
+          },
+          navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+          },
+          breakpoints: {
+              // Enable swiper only for screens less than 992px wide (bootstrap's lg breakpoint)
+              992: {
+                  slidesPerView: 1,
+                  spaceBetween: 10
+              }
+          }
+      });
+     </script>
+  
     <!-- /Recent Blog Post Section-->
 
     <!-- Testimonials Section-->
