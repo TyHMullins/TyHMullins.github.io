@@ -2257,13 +2257,13 @@ section,
 }
 
 .featuredproperties .btn-get-started {
-  color: var(--contrast-color);
+  color: var(--accent-color);
   font-family: var(--heading-font);
   font-weight: 600;
   font-size: 18px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  display: inline-block;
+  display: flex;
   padding: 10px 40px;
   border-radius: 50px;
   transition: 0.5s;
@@ -2271,8 +2271,10 @@ section,
   align-self: flex-start;
   flex-shrink: 0;
   border: 2px solid var(--accent-color);
+  justify-content: center;
 }
 
 .featuredproperties .btn-get-started:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: var(--contrast-color);
 }
