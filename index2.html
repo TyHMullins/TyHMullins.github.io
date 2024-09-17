@@ -71,7 +71,8 @@
               <li><a href="#">Consultation</a></li>
             </ul>
           </li>
-          <li class="dropdown"><a href="listings.html"><span>Listings</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li id="listings-menu" class="dropdown">
+            <a href="listings.html"><span>Listings</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
                 <li><a href="#featuredproperties">Featured Listings</a></li>
             </ul>
@@ -88,6 +89,31 @@
       </nav>
 
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        // Get the listings menu item
+        const listingsMenu = document.getElementById('listings-menu');
+        const featuredSection = document.getElementById('featuredproperties');
+    
+        // Create an IntersectionObserver to detect when the #featuredproperties section is in view
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              // Add 'active' class when the section is in view
+              listingsMenu.classList.add('active');
+            } else {
+              // Remove 'active' class when the section is out of view
+              listingsMenu.classList.remove('active');
+            }
+          });
+        }, {
+          threshold: 0.5 // Trigger when 50% of the section is in view
+        });
+    
+        // Observe the featuredproperties section
+        observer.observe(featuredSection);
+      });
+    </script>
   </header>
 
   <main class="main">
