@@ -149,6 +149,43 @@
               </div>
             </div>
           </div><!-- End Carousel Item -->
+
+          <!-- PROPERTY SEARCH TESTING-->
+          <div class="carousel-item"></div>
+            <img src="img/hero-carousel/search-background.jpg" alt="Search Properties Background">
+            <div class="carousel-container">
+                <div class="search-form-container">
+                    <h2>Find Your Perfect Property</h2>
+                    <form action="search-results.html" method="GET" class="property-search-form">
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <input type="text" id="location" name="location" placeholder="Enter city or region" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="price">Price Range</label>
+                            <select id="price" name="price" class="form-control">
+                                <option value="">Select Price Range</option>
+                                <option value="0-500">Up to $500</option>
+                                <option value="500-1000">$500 - $1000</option>
+                                <option value="1000-5000">$1000 - $5000</option>
+                                <option value="5000+">Above $5000</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="property-type">Property Type</label>
+                            <select id="property-type" name="property_type" class="form-control">
+                                <option value="">Select Property Type</option>
+                                <option value="rent">Rent</option>
+                                <option value="sale">Sale</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-get-started">Search Properties</button>
+                    </form>
+                </div>
+            </div>
+          </div>
+          <!-- /PROPERTY SEARCH TESTING-->
+
   
           <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
             <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
