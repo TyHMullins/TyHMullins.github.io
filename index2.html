@@ -71,7 +71,7 @@
               <li><a href="#">Consultation</a></li>
             </ul>
           </li>
-          <li id="listings-menu" class="dropdown">
+          <li class="dropdown">
             <a href="listings.html"><span>Listings</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
                 <li><a href="#featuredproperties">Featured Listings</a></li>
@@ -89,6 +89,17 @@
       </nav>
 
     </div>
+    <style>
+      /* Default state for the menu link */
+      #listings-link {
+        text-decoration: none;
+      }
+
+      /* Active state for underline */
+      #listings-link.active {
+        text-decoration: underline;
+      }
+    </style>
   </header>
 
   <main class="main">
@@ -1324,30 +1335,25 @@
       });
     });
   });
-  document.addEventListener("DOMContentLoaded", function() {
-    const listingsMenu = document.getElementById('listings-menu');
-    const featuredSection = document.getElementById('featuredproperties');
-
-    function handleScroll() {
-      const sectionTop = featuredSection.getBoundingClientRect().top;
-      const sectionHeight = featuredSection.offsetHeight;
-      const viewportHeight = window.innerHeight;
-
-      // Check if the section is within the viewport
-      if (sectionTop <= viewportHeight / 2 && (sectionTop + sectionHeight) > viewportHeight / 2) {
-        listingsMenu.classList.add('active');
-      } else {
-        listingsMenu.classList.remove('active');
-      }
+</script>
+<script>
+  document.addEventListener('scroll', function() {
+    var listingsLink = document.getElementById('listings-link');
+    var featuredPropertiesSection = document.getElementById('featuredproperties');
+    
+    // Get the position of the featuredproperties section
+    var sectionTop = featuredPropertiesSection.getBoundingClientRect().top;
+    var sectionBottom = featuredPropertiesSection.getBoundingClientRect().bottom;
+    
+    // Add or remove 'active' class based on section visibility
+    if (sectionTop < window.innerHeight && sectionBottom >= 0) {
+      listingsLink.classList.add('active');
+    } else {
+      listingsLink.classList.remove('active');
     }
-
-    // Listen for scroll events
-    window.addEventListener('scroll', handleScroll);
-
-    // Run the function initially in case the section is already in view on page load
-    handleScroll();
   });
 </script>
+
 
 </body>
 
