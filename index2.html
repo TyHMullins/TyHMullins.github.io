@@ -91,27 +91,27 @@
     </div>
     <script>
       document.addEventListener("DOMContentLoaded", function() {
-        // Get the listings menu item
         const listingsMenu = document.getElementById('listings-menu');
         const featuredSection = document.getElementById('featuredproperties');
     
-        // Create an IntersectionObserver to detect when the #featuredproperties section is in view
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              // Add 'active' class when the section is in view
-              listingsMenu.classList.add('active');
-            } else {
-              // Remove 'active' class when the section is out of view
-              listingsMenu.classList.remove('active');
-            }
-          });
-        }, {
-          threshold: 0.5 // Trigger when 50% of the section is in view
-        });
+        function handleScroll() {
+          const sectionTop = featuredSection.getBoundingClientRect().top;
+          const sectionHeight = featuredSection.offsetHeight;
+          const viewportHeight = window.innerHeight;
     
-        // Observe the featuredproperties section
-        observer.observe(featuredSection);
+          // Check if the section is within the viewport
+          if (sectionTop <= viewportHeight / 2 && (sectionTop + sectionHeight) > viewportHeight / 2) {
+            listingsMenu.classList.add('active');
+          } else {
+            listingsMenu.classList.remove('active');
+          }
+        }
+    
+        // Listen for scroll events
+        window.addEventListener('scroll', handleScroll);
+    
+        // Run the function initially in case the section is already in view on page load
+        handleScroll();
       });
     </script>
   </header>
@@ -839,6 +839,7 @@
                   </div>
               </div>
           </div>
+          <a href="blogs.html" class="btn-get-started">See More</a>
       </div>
   
       <!-- Swiper Carousel for mobile (hide on desktop) -->
@@ -895,8 +896,8 @@
           
           <!-- Pagination for indicators -->
           <div class="swiper-pagination"></div>
+          <a href="blogs.html" class="btn-get-started">See More</a>
      </div>
-     <a href="blogs.html" class="btn-get-started">See More</a>
     </section>
      <!-- Swiper JS Initialization -->
      <script>
