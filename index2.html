@@ -89,31 +89,6 @@
       </nav>
 
     </div>
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        const listingsMenu = document.getElementById('listings-menu');
-        const featuredSection = document.getElementById('featuredproperties');
-    
-        function handleScroll() {
-          const sectionTop = featuredSection.getBoundingClientRect().top;
-          const sectionHeight = featuredSection.offsetHeight;
-          const viewportHeight = window.innerHeight;
-    
-          // Check if the section is within the viewport
-          if (sectionTop <= viewportHeight / 2 && (sectionTop + sectionHeight) > viewportHeight / 2) {
-            listingsMenu.classList.add('active');
-          } else {
-            listingsMenu.classList.remove('active');
-          }
-        }
-    
-        // Listen for scroll events
-        window.addEventListener('scroll', handleScroll);
-    
-        // Run the function initially in case the section is already in view on page load
-        handleScroll();
-      });
-    </script>
   </header>
 
   <main class="main">
@@ -1348,6 +1323,29 @@
         });
       });
     });
+  });
+  document.addEventListener("DOMContentLoaded", function() {
+    const listingsMenu = document.getElementById('listings-menu');
+    const featuredSection = document.getElementById('featuredproperties');
+
+    function handleScroll() {
+      const sectionTop = featuredSection.getBoundingClientRect().top;
+      const sectionHeight = featuredSection.offsetHeight;
+      const viewportHeight = window.innerHeight;
+
+      // Check if the section is within the viewport
+      if (sectionTop <= viewportHeight / 2 && (sectionTop + sectionHeight) > viewportHeight / 2) {
+        listingsMenu.classList.add('active');
+      } else {
+        listingsMenu.classList.remove('active');
+      }
+    }
+
+    // Listen for scroll events
+    window.addEventListener('scroll', handleScroll);
+
+    // Run the function initially in case the section is already in view on page load
+    handleScroll();
   });
 </script>
 
