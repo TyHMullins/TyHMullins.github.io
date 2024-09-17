@@ -876,10 +876,20 @@
      <script>
       var swiper = new Swiper('.swiper-container', {
           loop: true,
-          pagination: {
+          /*pagination: {
               el: '.swiper-pagination', // Enables the indicators
+              type: bullets,
               clickable: true,
-          },
+          },*/
+          pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                bulletClass: 'swiper-pagination-bullet',
+                bulletActiveClass: 'swiper-pagination-bullet-active',
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '"></span>';
+                }
+            },
           navigation: {
               nextEl: '.swiper-button-next',
               prevEl: '.swiper-button-prev',
