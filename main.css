@@ -948,7 +948,7 @@ section,
 }
 
 /* Adjust pagination positioning */
-.recent-blog-poststies .swiper-pagination {
+.recent-blog-posts .swiper-pagination {
   margin-top:20px;
   position:relative;
 }
