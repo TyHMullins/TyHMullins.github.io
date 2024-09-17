@@ -79,7 +79,7 @@
           </li>
           <li><a href="#team">Team</a></li>
           <li><a href="#portfolio">Gallery</a></li>
-          <li><a href="#recent-blog-posts">Blog</a></li>
+          <li><a href="#blogs.html" id="blog-link">Blog</a></li>
           <li><a href="#testimonials">Testimonials</a></li>
           <li><a href="#cards">Referals</a></li>
           <li><a href="#faq">FAQ</a></li>
@@ -90,15 +90,23 @@
 
     </div>
     <style>
-      /* Default state for the menu link */
       #listings-link {
-        text-decoration: none;
+        border-bottom: none;
       }
 
-      /* Active state for underline */
+      /* Active state with bottom border (underline effect) */
       #listings-link.active {
-        text-decoration: underline;
+        border-bottom: 2px solid #000; /* Adjust the thickness and color as needed */
+      } 
+      /* Default state for the blog link */
+      #blog-link {
+        border-bottom: none;
       }
+
+      /* Active state with bottom border (underline effect) */
+      #blog-link.active {
+        border-bottom: 2px solid #000; /* Adjust the thickness and color as needed */
+      }     
     </style>
   </header>
 
@@ -1350,6 +1358,34 @@
       listingsLink.classList.add('active');
     } else {
       listingsLink.classList.remove('active');
+    }
+  });
+  document.addEventListener('scroll', function() {
+    var listingsLink = document.getElementById('listings-link');
+    var blogLink = document.getElementById('blog-link');
+    var featuredPropertiesSection = document.getElementById('featuredproperties');
+    var blogSection = document.getElementById('recent-blog-posts');
+
+    // Get the position of the featuredproperties section
+    var sectionTop = featuredPropertiesSection.getBoundingClientRect().top;
+    var sectionBottom = featuredPropertiesSection.getBoundingClientRect().bottom;
+    
+    // Add or remove 'active' class based on section visibility for Listings
+    if (sectionTop < window.innerHeight && sectionBottom >= 0) {
+      listingsLink.classList.add('active');
+    } else {
+      listingsLink.classList.remove('active');
+    }
+
+    // Get the position of the recent-blog-posts section
+    var blogSectionTop = blogSection.getBoundingClientRect().top;
+    var blogSectionBottom = blogSection.getBoundingClientRect().bottom;
+
+    // Add or remove 'active' class based on section visibility for Blog
+    if (blogSectionTop < window.innerHeight && blogSectionBottom >= 0) {
+      blogLink.classList.add('active');
+    } else {
+      blogLink.classList.remove('active');
     }
   });
 </script>
