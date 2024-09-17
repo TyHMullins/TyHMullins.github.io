@@ -1324,20 +1324,15 @@
           </ul>
         </div>
 
-        <div class="col-lg-4 col-md-12 footer-newsletter">
-          <h4>Our Newsletter</h4>
+        <div class="col-lg-4 col-md-12 footer-newsletter"></div>
+          <h4>Our Newsl4etter</h4>
           <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
-          
-          <form action="https://formspree.io/f/mqazojrz" method="post" class="newsletter-form">
-            <div class="newsletter-form">
-              <input type="email" name="email" placeholder="Your Email" required>
-              <input type="submit" value="Subscribe">
-            </div>
+          <form action="https://formspree.io/f/mqazojrz" method="POST" class="php-email-form">
+            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+            <div class="loading" style="display:none;">Loading</div>
+            <div class="error-message" style="display:none;"></div>
+            <div class="sent-message" style="display:none;">Your subscription request has been sent. Thank you!</div>
           </form>
-          
-          <div class="loading" style="display:none;">Loading...</div>
-          <div class="error-message" style="display:none;">There was an error, please try again.</div>
-          <div class="sent-message" style="display:none;">Your subscription request has been sent. Thank you!</div>
         </div>
 
       </div>
