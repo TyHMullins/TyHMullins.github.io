@@ -2111,8 +2111,8 @@ section,
 }
 
 .featuredproperties .property-card img {
-  width: 100%; /* change to 300px */
-  height: auto; /* Let the image scale correctly  IF THAT DOESNT WORK SET A FIXED HEIGHT*/
+  width: 100%; 
+  height: 300px; 
   object-fit: cover;
   object-position: center;
 }
@@ -2142,7 +2142,6 @@ section,
 }
 
 /* Addy Text */
-
 .featuredproperties .card-text.addy {
   font-size: 0.8rem; /* Scalable font size */
   margin: 0;
