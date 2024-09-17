@@ -494,6 +494,7 @@ h6 {
   margin-bottom: 5px;
 }
 
+/* Newsletter Form Styling */
 .footer .footer-newsletter .newsletter-form {
   margin-top: 30px;
   margin-bottom: 15px;
@@ -504,37 +505,56 @@ h6 {
   display: flex;
   background-color: var(--background-color);
   transition: 0.3s;
+  box-sizing: border-box; /* Ensures padding doesn't affect layout */
 }
 
-.footer .footer-newsletter .newsletter-form:focus-within {
-  border-color: var(--accent-color);
-}
-
+/* Email Input */
 .footer .footer-newsletter .newsletter-form input[type=email] {
-  border: 0;
+  border: 0; /* Remove any borders */
   padding: 4px;
-  width: 100%;
+  margin: 0; /* Remove margins */
+  width: 100%; /* Ensure full width */
   background-color: var(--background-color);
   color: var(--default-color);
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
+/* Remove default browser outline on focus */
 .footer .footer-newsletter .newsletter-form input[type=email]:focus-visible {
-  outline: none;
+  outline: none; /* Remove default focus outline */
 }
 
+/* Submit Button */
 .footer .footer-newsletter .newsletter-form input[type=submit] {
-  border: 0;
+  border: 0; /* Remove any borders */
   font-size: 16px;
   padding: 0 20px;
-  margin: -7px -8px -7px 0;
+  margin: 0; /* Remove margins */
   background: var(--accent-color);
   color: var(--contrast-color);
   transition: 0.3s;
   border-radius: 0 4px 4px 0;
+  box-sizing: border-box; /* Ensure padding doesn't affect layout */
 }
 
+/* Remove hover outline if any */
 .footer .footer-newsletter .newsletter-form input[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  outline: none; /* Ensure no outline appears on hover */
+}
+
+/* Form Focus State */
+.footer .footer-newsletter .newsletter-form:focus-within {
+  border-color: var(--accent-color); /* Border on focus */
+  outline: none; /* Remove outline if applied to the form itself */
+}
+
+/* Remove outline or margin from the form */
+.footer .footer-newsletter {
+  outline: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .footer .copyright {
