@@ -755,7 +755,7 @@ section,
   inset: 90px 100px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   flex-direction: column;
   z-index: 3;
 }
