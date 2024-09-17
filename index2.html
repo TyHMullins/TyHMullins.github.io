@@ -115,42 +115,53 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-        <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="8000">
-          
+      <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
+        
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active"></li>
+          <li data-bs-target="#hero-carousel" data-bs-slide-to="1"></li>
+          <li data-bs-target="#hero-carousel" data-bs-slide-to="2"></li>
+          <li data-bs-target="#hero-carousel" data-bs-slide-to="3"></li>
+        </ol>
+    
+        <!-- Carousel Inner (Slides) -->
+        <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="img/hero-carousel/hero-carousel-1.jpg" alt="Search Properties Background">
             <div class="carousel-container">
-                <div class="search-form-container">
-                    <h2>Find Your Perfect Property</h2>
-                    <form action="search-results.html" method="GET" class="property-search-form">
-                        <div class="form-group">
-                            <label for="location">Location</label>
-                            <input type="text" id="location" name="location" placeholder="Enter city or region" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="price">Price Range</label>
-                            <select id="price" name="price" class="form-control">
-                                <option value="">Select Price Range</option>
-                                <option value="0-500">Up to $500</option>
-                                <option value="500-1000">$500 - $1000</option>
-                                <option value="1000-5000">$1000 - $5000</option>
-                                <option value="5000+">Above $5000</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="property-type">Property Type</label>
-                            <select id="property-type" name="property_type" class="form-control">
-                                <option value="">Select Property Type</option>
-                                <option value="rent">Rent</option>
-                                <option value="sale">Sale</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn-get-started" style="background-color: transparent;" onmouseover="this.style.backgroundColor='#1bac91';" onmouseout="this.style.backgroundColor='transparent';">Search Properties</button>
-                    </form>
+              <div class="search-form-container">
+                <h2>Find Your Perfect Property</h2>
+                <form action="search-results.html" method="GET" class="property-search-form">
+                  <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="location" placeholder="Enter city or region" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label for="price">Price Range</label>
+                    <select id="price" name="price" class="form-control">
+                      <option value="">Select Price Range</option>
+                      <option value="0-500">Up to $500</option>
+                      <option value="500-1000">$500 - $1000</option>
+                      <option value="1000-5000">$1000 - $5000</option>
+                      <option value="5000+">Above $5000</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="property-type">Property Type</label>
+                    <select id="property-type" name="property_type" class="form-control">
+                      <option value="">Select Property Type</option>
+                      <option value="rent">Rent</option>
+                      <option value="sale">Sale</option>
+                    </select>
+                  </div>
+                  <button type="submit" class="btn-get-started" style="background-color: transparent;" onmouseover="this.style.backgroundColor='#1bac91';" onmouseout="this.style.backgroundColor='transparent';">Search Properties</button>
+                </form>
               </div>
             </div>
-          </div><!-- /PROPERTY SEARCH -->
-
+          </div>
+          
+          <!-- Additional Carousel Items -->
           <div class="carousel-item">
             <img src="img/hero-carousel/hero-carousel-1.jpg" alt="">
             <div class="carousel-container">
@@ -160,8 +171,8 @@
                 <a href="property-single.html" class="btn-get-started">rent | $ 12.000</a>
               </div>
             </div>
-          </div><!-- End Carousel Item -->
-  
+          </div>
+    
           <div class="carousel-item">
             <img src="img/hero-carousel/hero-carousel-2.jpg" alt="">
             <div class="carousel-container">
@@ -171,41 +182,33 @@
                 <a href="property-single.html" class="btn-get-started">sale | $ 356.000</a>
               </div>
             </div>
-          </div><!-- End Carousel Item -->
-  
+          </div>
+    
           <div class="carousel-item">
             <img src="img/hero-carousel/hero-carousel-3.jpg" alt="">
             <div class="carousel-container">
               <div>
                 <p>Doral, Florida</p>
-                <h2><span>247</span> Vitra Road three</h2>
+                <h2><span>247</span> Vitra Road Three</h2>
                 <a href="property-single.html" class="btn-get-started">rent | $ 3.000</a>
               </div>
             </div>
-          </div><!-- End Carousel Item -->
-
           </div>
-
-        </div>
-        
-          <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-          </a>
-  
-          <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
-            <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-          </a>
-  
-          <ol class="carousel-indicators">
-            <li data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active"></li>
-            <li data-bs-target="#hero-carousel" data-bs-slide-to="1" class=""></li>
-            <li data-bs-target="#hero-carousel" data-bs-slide-to="2" class=""></li>
-            <li data-bs-target="#hero-carousel" data-bs-slide-to="3" class=""></li>
-          </ol>
-  
-        </div>
-  
-      </section>
+        </div> <!-- End of carousel-inner -->
+    
+        <!-- Carousel Controls -->
+        <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+    
+        <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+    
+      </div>
+    
+    </section>
+    
     <!--Hero Section -->
 
     <!-- About Section -->
